@@ -1,10 +1,10 @@
-# backend-static
+# @ngx-foundation/backend-static
 
 You mast import HttpClientModule in your application before using this lib
 
 ## Getting started
 
-### Step 1: Install `backend-static`:
+### Step 1: Install `@ngx-foundation/backend-static`:
 
 #### NPM
 
