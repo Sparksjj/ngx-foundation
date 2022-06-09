@@ -2,6 +2,7 @@
   "name": "angular-core",
   "version": "0.0.1",
   "license": "MIT",
+  "description": "Main environment to work with angular",
   "author": {
     "name": "Yauhen Hursky",
     "email": "yauhenhursky@gmail.com"
@@ -12,21 +13,20 @@
       "email": "yauhenhursky@gmail.com"
     }
   ],
-  "homepage": "",
+  "homepage": "https://github.com/Sparksjj/ngx-foundation",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Sparksjj/ngx-foundation"
+  },
+  "engines": {
+    "node": ">= 16.13.0",
+    "npm": ">= 8.1.0"
   },
   "keywords": [
     "angular",
     "angular utils",
     "angular core"
   ],
-  "engines": {
-    "node": ">= 16.13.0",
-    "npm": ">= 8.1.0"
-  },
-  "description": "Main environment to work with angular",
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
@@ -34,7 +34,7 @@
     "build": "nx build",
     "test": "nx test"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@angular/animations": "~14.0.0",
     "@angular/common": "~14.0.0",
