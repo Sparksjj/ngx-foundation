@@ -90,8 +90,8 @@ export class AppComponent {
 
 ### BackendStaticService
 
-| Name         | Type               | Description                      |
-| ------------ | ------------------ | -------------------------------- |
-| static$      | BehaveorSubject<T> | BehaveorSubject with static data |
-| static       | <T>                | Static data                      |
-| loadStatic() | Observable<T>      | Method to load static data       |
+| Name         | Type                 | Description                      |
+| ------------ | -------------------- | -------------------------------- |
+| static$      | BehaveorSubject\<T\> | BehaveorSubject with static data |
+| static       | \<T\>                | Static data                      |
+| loadStatic() | Observable\<T\>      | Method to load static data       |
