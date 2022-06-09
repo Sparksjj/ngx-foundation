@@ -1,15 +1,15 @@
-# @ngx-foundation/backend-static
+# @ngx-basis/backend-static
 
 You mast import HttpClientModule in your application before using this lib
 
 ## Getting started
 
-### Step 1: Install `@ngx-foundation/backend-static`:
+### Step 1: Install `@ngx-basis/backend-static`:
 
 #### NPM
 
 ```shell
-npm install --save @ngx-foundation/backend-static
+npm install --save @ngx-basis/backend-static
 ```
 
 ### Step 2: Add the BackendStaticResolver for the required route and HttpClientModule:
@@ -18,7 +18,7 @@ WARNING: Don't forget to add HttpClientModule.
 
 ```js
 import { HttpClientModule } from '@angular/common/http';
-import { BackendStaticResolver } from '@ngx-foundation/backend-static';
+import { BackendStaticResolver } from '@ngx-basis/backend-static';
 
 @NgModule({
   declarations: [AppComponent],
@@ -40,7 +40,7 @@ export class AppModule {}
 
 ```js
 import { HttpClientModule } from '@angular/common/http';
-import { BackendStaticResolver, BACKEND_STATIC_DEFAULT_VALUE, BACKEND_STATIC_DEFAULT_VALUE } from '@ngx-foundation/backend-static';
+import { BackendStaticResolver, BACKEND_STATIC_DEFAULT_VALUE, BACKEND_STATIC_DEFAULT_VALUE } from '@ngx-basis/backend-static';
 
 @NgModule({
   declarations: [AppComponent],
@@ -71,7 +71,7 @@ export class AppModule {}
 ### Step 4: Use static value where you want using BackendStaticService:
 
 ```js
-import { BackendStaticService } from '@ngx-foundation/backend-static';
+import { BackendStaticService } from '@ngx-basis/backend-static';
 
 @Component({
   selector: 'core-root',
