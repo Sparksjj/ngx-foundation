@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/backend-static/src",
+  "prefix": "backend-static",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/backend-static"],
+      "options": {
+        "project": "libs/backend-static/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/backend-static/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/backend-static/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend-static"],
+      "options": {
+        "jestConfig": "libs/backend-static/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/backend-static/**/*.ts",
+          "libs/backend-static/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

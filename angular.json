@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "backend-static": "libs/backend-static",
+    "angular-core": "apps/angular-core",
+    "angular-core-e2e": "apps/angular-core-e2e"
+  }
+}
