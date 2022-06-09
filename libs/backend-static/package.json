@@ -1,21 +1,15 @@
 {
-  "name": "backend-static",
-  "version": "0.0.6",
+  "name": "@ngx-foundation/backend-static",
+  "version": "0.0.7",
   "description": "Main utils to develop site's static data",
-  "author": {
-    "name": "Yauhen Hursky",
-    "email": "yauhenhursky@gmail.com"
-  },
+  "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
-    {
-      "name": "Yauhen Hursky",
-      "email": "yauhenhursky@gmail.com"
-    }
+    "Yauhen Hursky <yauhenhursky@gmail.com>"
   ],
   "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/backend-static",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/backend-static"
+    "url": "git+https://github.com/Sparksjj/ngx-foundation.git#master"
   },
   "keywords": [
     "angular",
@@ -33,5 +27,12 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sparksjj/ngx-foundation/issues"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
