@@ -1,0 +1,10 @@
+{
+  "*.html": "htmlhint --config .htmlhintrc -i index.html",
+  "*.css": [
+    "stylelint --fix"
+  ],
+  "*.scss": [
+    "stylelint -s=scss --fix"
+  ],
+  "*.{js,ts,css,scss,md}": "prettier --write"
+}

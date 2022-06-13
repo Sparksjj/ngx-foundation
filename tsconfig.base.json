@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "backend-static": ["libs/backend-static/src/index.ts"]
+      "backend-static": ["libs/backend-static/src/index.ts"],
+      "base-classes": ["libs/base-classes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
