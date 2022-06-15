@@ -68,7 +68,32 @@ import { BackendStaticResolver, BACKEND_STATIC_DEFAULT_VALUE, BACKEND_STATIC_DEF
 export class AppModule {}
 ```
 
-### Step 4: Use static value where you want using BackendStaticService:
+### Step 4: You can add class to OPTIONAL BACKEND_STATIC_CLASS_FOR_INSTANCE InjectionTokens to create an instance with raw data:
+
+```js
+import { HttpClientModule } from '@angular/common/http';
+import { BACKEND_STATIC_CLASS_FOR_INSTANCE } from '@ngx-basis/backend-static';
+
+class Static() {
+  constructor(data: Static) => {
+    Object.assign(this, data)
+  }
+}
+
+@NgModule({
+  declarations: [AppComponent],
+  ...
+  providers: [
+    {
+      provide: BACKEND_STATIC_CLASS_FOR_INSTANCE,
+      useValue: Static, // raw data from api responce will be curl to this class like Static(data) and will save instance to service
+    },
+  ],
+})
+export class AppModule {}
+```
+
+### Step 5: Use static value where you want using BackendStaticService:
 
 ```js
 import { BackendStaticService } from '@ngx-basis/backend-static';

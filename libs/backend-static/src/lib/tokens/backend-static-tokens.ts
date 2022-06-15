@@ -13,3 +13,10 @@ export const BACKEND_STATIC_DEFAULT_VALUE = new InjectionToken(
     factory: () => undefined,
   }
 );
+
+export const BACKEND_STATIC_CLASS_FOR_INSTANCE = new InjectionToken(
+  'Default class to make instance for static',
+  {
+    factory: () => undefined,
+  }
+);

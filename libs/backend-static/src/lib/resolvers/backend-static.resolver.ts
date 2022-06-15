@@ -3,7 +3,7 @@ import { Resolve } from '@angular/router';
 import { catchError, Observable, of, throwError } from 'rxjs';
 import { DefaultBackendStaticModel } from '../models/default-backend-static-model';
 import { BackendStaticService } from '../services/backend-static.service';
-import { BACKEND_STATIC_DEFAULT_VALUE } from '../tokens/backend-static-api-token';
+import { BACKEND_STATIC_DEFAULT_VALUE } from '../tokens/backend-static-tokens';
 
 @Injectable({ providedIn: 'root' })
 export class BackendStaticResolver<T = DefaultBackendStaticModel>

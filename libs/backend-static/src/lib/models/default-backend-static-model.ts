@@ -1,2 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface DefaultBackendStaticModel {}
+export class DefaultBackendStaticModel {
+  constructor(data: DefaultBackendStaticModel) {
+    Object.assign(this, data);
+  }
+}
