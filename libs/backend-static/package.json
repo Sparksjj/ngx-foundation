@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/backend-static",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Main utils to develop site's static data",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
