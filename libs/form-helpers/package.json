@@ -1,0 +1,39 @@
+{
+  "name": "@ngx-basis/form-helpers",
+  "version": "0.0.1",
+  "description": "Main utils to work with form elements",
+  "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
+  "contributors": [
+    "Yauhen Hursky <yauhenhursky@gmail.com>"
+  ],
+  "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/form-helpers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparksjj/ngx-foundation.git#master"
+  },
+  "keywords": [
+    "angular",
+    "form",
+    "helpers"
+  ],
+  "engines": {
+    "node": ">= 16.13.0",
+    "npm": ">= 8.1.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=13.0.0",
+    "@angular/core": ">=13.0.0",
+    "@angular/router": ">=13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sparksjj/ngx-foundation/issues"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
