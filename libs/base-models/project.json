@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/base-models/src",
+  "prefix": "angular-core",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/base-models"],
+      "options": {
+        "project": "libs/base-models/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/base-models/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/base-models/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/base-models"],
+      "options": {
+        "jestConfig": "libs/base-models/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/base-models/**/*.ts",
+          "libs/base-models/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

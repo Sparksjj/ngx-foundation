@@ -1,0 +1,30 @@
+{
+  "name": "@ngx-basis/base-models",
+  "version": "0.1.0",
+  "description": "Base models for inheritance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "angular",
+    "models for inheritance"
+  ],
+  "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
+  "contributors": [
+    "Yauhen Hursky <yauhenhursky@gmail.com>"
+  ],
+  "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/base-models",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparksjj/ngx-foundation.git#master"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sparksjj/ngx-foundation/issues"
+  }
+}
