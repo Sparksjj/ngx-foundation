@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/form-helpers",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Main utils to work with form elements",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
