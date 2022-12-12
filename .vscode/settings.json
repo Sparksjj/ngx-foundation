@@ -1,3 +1,7 @@
 {
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "exportall.config.folderListener": [
+    "/libs/form-helpers/src/lib",
+    "/libs/base-models/src/lib"
+  ]
 }

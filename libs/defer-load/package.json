@@ -1,0 +1,40 @@
+{
+  "name": "@ngx-basis/defer-load",
+  "version": "0.0.2",
+  "description": "Angular wrapper for the Intersection Observer API",
+  "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
+  "contributors": [
+    "Yauhen Hursky <yauhenhursky@gmail.com>"
+  ],
+  "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/defer-load",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparksjj/ngx-foundation.git#master"
+  },
+  "keywords": [
+    "angular",
+    "intersection",
+    "observer",
+    "defer-load"
+  ],
+  "engines": {
+    "node": ">= 16.13.0",
+    "npm": ">= 8.1.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=13.0.0",
+    "@angular/core": ">=13.0.0",
+    "@angular/router": ">=13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sparksjj/ngx-foundation/issues"
+  },
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

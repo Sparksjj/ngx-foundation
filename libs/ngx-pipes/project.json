@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/ngx-pipes/src",
+  "prefix": "angular-core",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/ngx-pipes"],
+      "options": {
+        "project": "libs/ngx-pipes/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ngx-pipes/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ngx-pipes/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ngx-pipes"],
+      "options": {
+        "jestConfig": "libs/ngx-pipes/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ngx-pipes/**/*.ts",
+          "libs/ngx-pipes/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/defer-load/src",
+  "prefix": "angular-core",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/defer-load"],
+      "options": {
+        "project": "libs/defer-load/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/defer-load/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/defer-load/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/defer-load"],
+      "options": {
+        "jestConfig": "libs/defer-load/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/defer-load/**/*.ts",
+          "libs/defer-load/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

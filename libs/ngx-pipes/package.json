@@ -1,7 +1,7 @@
 {
-  "name": "@ngx-basis/base-models",
-  "version": "0.2.2",
-  "description": "Base models for inheritance",
+  "name": "@ngx-basis/ngx-pipes",
+  "version": "0.0.3",
+  "description": "Base pipes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,13 +9,14 @@
   "keywords": [
     "typescript",
     "angular",
-    "models for inheritance"
+    "pipes",
+    "angular"
   ],
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
     "Yauhen Hursky <yauhenhursky@gmail.com>"
   ],
-  "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/base-models",
+  "homepage": "https://github.com/Sparksjj/ngx-foundation/tree/master/libs/ngx-pipes",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sparksjj/ngx-foundation.git#master"
