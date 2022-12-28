@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/base-models",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Base models for inheritance",
   "main": "index.js",
   "scripts": {
