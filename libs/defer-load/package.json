@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/defer-load",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Angular wrapper for the Intersection Observer API",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
@@ -22,9 +22,9 @@
     "npm": ">= 8.1.0"
   },
   "peerDependencies": {
-    "@angular/common": ">=13.0.0",
-    "@angular/core": ">=13.0.0",
-    "@angular/router": ">=13.0.0"
+    "@angular/common": ">=15.0.0",
+    "@angular/core": ">=15.0.0",
+    "@angular/router": ">=15.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -5,7 +5,6 @@
     "angular-core": "apps/angular-core",
     "angular-core-e2e": "apps/angular-core-e2e",
     "backend-static": "libs/backend-static",
-    "base-classes": "libs/base-classes",
     "base-models": "libs/base-models",
     "defer-load": "libs/defer-load",
     "form-helpers": "libs/form-helpers",
