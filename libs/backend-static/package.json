@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/backend-static",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Main utils to develop site's static data",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
@@ -20,7 +20,6 @@
     "node": ">= 16.13.0",
     "npm": ">= 8.1.0"
   },
-  "peerDependencies": {},
   "dependencies": {
     "tslib": "^2.3.0"
   },

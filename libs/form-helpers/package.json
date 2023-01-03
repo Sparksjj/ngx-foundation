@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/form-helpers",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Main utils to work with form elements",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
@@ -20,7 +20,6 @@
     "node": ">= 16.13.0",
     "npm": ">= 8.1.0"
   },
-  "peerDependencies": {},
   "dependencies": {
     "tslib": "^2.3.0"
   },
