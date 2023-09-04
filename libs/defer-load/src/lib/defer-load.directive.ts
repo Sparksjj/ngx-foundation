@@ -8,6 +8,7 @@ import {
   Output,
 } from '@angular/core';
 
+// TODO: make it stanalon
 @Directive({
   selector: '[deferLoad]',
 })
