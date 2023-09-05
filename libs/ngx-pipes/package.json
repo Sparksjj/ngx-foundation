@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/ngx-pipes",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Base pipes",
   "main": "index.js",
   "scripts": {
@@ -29,8 +29,8 @@
     "url": "https://github.com/Sparksjj/ngx-foundation/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^14.x",
-    "@angular/animations": "^14.x",
-    "@angular/core": "^14.x"
+    "@angular/common": ">= 14.0.0",
+    "@angular/animations": ">= 14.0.0",
+    "@angular/core": ">= 14.0.0"
   }
 }

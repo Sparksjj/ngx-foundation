@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/form-helpers",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Main utils to work with form elements",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
@@ -32,8 +32,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "@angular/common": "^14.x",
-    "@angular/animations": "^14.x",
-    "@angular/core": "^14.x"
+    "@angular/common": ">= 14.0.0",
+    "@angular/animations": ">= 14.0.0",
+    "@angular/core": ">= 14.0.0"
   }
 }

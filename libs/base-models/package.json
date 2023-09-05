@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/base-models",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base models for inheritance",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "url": "https://github.com/Sparksjj/ngx-foundation/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^14.x",
-    "@angular/animations": "^14.x",
-    "@angular/core": "^14.x"
+    "@angular/common": ">= 14.0.0",
+    "@angular/animations": ">= 14.0.0",
+    "@angular/core": ">= 14.0.0"
   }
 }

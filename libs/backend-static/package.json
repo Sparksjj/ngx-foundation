@@ -1,6 +1,6 @@
 {
   "name": "@ngx-basis/backend-static",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "Main utils to develop site's static data",
   "author": "Yauhen Hursky <yauhenhursky@gmail.com>",
   "contributors": [
@@ -32,8 +32,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "@angular/common": "^14.x",
-    "@angular/animations": "^14.x",
-    "@angular/core": "^14.x"
+    "@angular/common": ">= 14.0.0",
+    "@angular/animations": ">= 14.0.0",
+    "@angular/core": ">= 14.0.0"
   }
 }
