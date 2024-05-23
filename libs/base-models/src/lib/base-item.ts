@@ -1,6 +1,8 @@
 export class BaseItem<T> implements BaseItem<T> {
   id!: number;
+
   updated_at!: string;
+
   created_at!: string;
 
   constructor(data: Partial<T>) {

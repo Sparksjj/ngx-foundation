@@ -14,20 +14,30 @@ import {
 })
 export class DeferLoadDirective implements AfterViewInit, OnDestroy {
   @Input() self!: boolean;
+
   /** root `Element`, parent container of elements */
   @Input() rootSelector?: string;
+
   /** selector to find child list */
   @Input() selector = '.defer-load-item';
+
   @Output() deferLoad: EventEmitter<void> = new EventEmitter();
+
   @Output() deferLoadAlt: EventEmitter<void> = new EventEmitter();
 
   private intersectionObserver?: IntersectionObserver;
+
   private mutationObserver!: MutationObserver;
+
   private lastElement!: Element;
+
   private firstElement!: Element;
+
+  private readonly idKey = 'data-loader-id';
 
   /**
    * Construct a new directive for infinite scroll pagination.
+   * @param elRef
    */
   constructor(private elRef: ElementRef) {}
 
@@ -53,8 +63,8 @@ export class DeferLoadDirective implements AfterViewInit, OnDestroy {
       this.resubElement(list[list.length - 1], list[0]);
 
       this.mutationObserver = new MutationObserver(() => {
-        const list = document.querySelectorAll(this.selector);
-        this.resubElement(list[list.length - 1], list[0]);
+        const innerList = document.querySelectorAll(this.selector);
+        this.resubElement(innerList[innerList.length - 1], innerList[0]);
       });
       this.mutationObserver.observe(this.elRef.nativeElement, {
         childList: true,
@@ -72,6 +82,8 @@ export class DeferLoadDirective implements AfterViewInit, OnDestroy {
    * Construct a private function that checking the element and resubscribe to the `IntersectionObserver`.
    *
    * @param element `ElementRef`
+   * @param last
+   * @param first
    */
   private resubElement(last: Element, first: Element): void {
     if (!last || !first) {
@@ -120,17 +132,28 @@ export class DeferLoadDirective implements AfterViewInit, OnDestroy {
    * Construct a private function that checking if the entry is the last element.
    *
    * @param entry `IntersectionObserverEntry`.
-   *
-   * @return `Boolean`.
+   * @param first
+   * @returns `Boolean`.
    */
   private checkIfIntersecting(
     entry: IntersectionObserverEntry,
     first: boolean
   ): boolean {
-    return (
-      entry.isIntersecting &&
-      entry.target === (first ? this.firstElement : this.lastElement)
-    );
+    const el = first ? this.firstElement : this.lastElement;
+
+    if (entry.target === el) {
+      const id = el.getAttribute(this.idKey);
+      const newId = entry.isIntersecting ? '1' : '0';
+
+      if (id !== newId) {
+        el.setAttribute(this.idKey, newId);
+        return entry.isIntersecting;
+      } else {
+        return false;
+      }
+    }
+
+    return false;
   }
 
   /**

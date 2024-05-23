@@ -32,7 +32,9 @@ export interface Pagination<T> {
 
 export class Pagination<T> implements Pagination<T> {
   data: T[];
+
   links!: PaginationLinks;
+
   meta!: PaginationMeta;
 
   get hasNextPage(): boolean {

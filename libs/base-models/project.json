@@ -4,7 +4,7 @@
   "prefix": "angular-core",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nx/angular:package",
       "outputs": ["dist/libs/base-models"],
       "options": {
         "project": "libs/base-models/ng-package.json"
@@ -20,7 +20,7 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["coverage/libs/base-models"],
       "options": {
         "jestConfig": "libs/base-models/jest.config.ts",
@@ -28,7 +28,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/base-models/**/*.ts",

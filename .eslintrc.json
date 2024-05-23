@@ -3,28 +3,69 @@
   "ignorePatterns": ["**/*"],
   "plugins": [
     "@typescript-eslint",
-    "prettier",
     "simple-import-sort",
     "import",
     "jsdoc",
-    "ngrx",
-    "@nrwl/nx"
+    "rxjs",
+    "@nx"
   ],
   "overrides": [
     {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "warn",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "jsdoc/check-tag-names": 2,
+        "jsdoc/require-param": 2,
+        "jsdoc/require-returns": 0,
+        "jsdoc/check-indentation": 2,
+        "jsdoc/sort-tags": 2
+      }
+    },
+    {
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2019,
+        "project": "./tsconfig.base.json",
+        "sourceType": "module"
+      },
       "files": ["*.ts", "*.tsx"],
       "extends": [
-        "plugin:@nrwl/nx/typescript",
-        "plugin:@nrwl/nx/angular",
+        "plugin:@nx/typescript",
+        "plugin:@nx/angular",
         "plugin:import/recommended",
-        "plugin:ngrx/recommended"
+        "plugin:import/recommended"
       ],
       "rules": {
+        "rxjs/no-async-subscribe": "error",
+        "rxjs/no-ignored-error": "warn",
+        "rxjs/no-unbound-methods": "error",
+        "rxjs/no-ignored-observable": "error",
+        "rxjs/prefer-observer": [
+          "error",
+          {
+            "allowNext": false
+          }
+        ],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-unsafe-declaration-merging": "off",
         "@typescript-eslint/naming-convention": [
           "error",
           {
             "selector": "default",
-            "format": ["camelCase", "snake_case"],
+            "format": ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
             "leadingUnderscore": "allow",
             "trailingUnderscore": "allow"
           },
@@ -53,10 +94,11 @@
         "no-new-wrappers": "error",
         "no-throw-literal": "error",
         "import/no-unresolved": "off",
-        "simple-import-sort/exports": "error",
+        "simple-import-sort/exports": "warn",
         "sort-imports": "off",
         "import/named": "off",
         "@typescript-eslint/no-useless-constructor": "off",
+        "@typescript-eslint/semi": "error",
         "import/first": "error",
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
@@ -64,8 +106,19 @@
         "no-shadow": "off",
         "@typescript-eslint/no-shadow": "error",
         "no-invalid-this": "off",
-        "@typescript-eslint/no-invalid-this": ["warn"],
-        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-invalid-this": [
+          "warn",
+          { "capIsConstructor": true }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "caughtErrors": "all",
+            "ignoreRestSiblings": false
+          }
+        ],
         "@typescript-eslint/member-ordering": [
           "error",
           {
@@ -82,7 +135,6 @@
               "private-instance-field",
               "public-abstract-field",
               "protected-abstract-field",
-              "private-abstract-field",
               "public-field",
               "protected-field",
               "private-field",
@@ -91,12 +143,10 @@
               "abstract-field",
               "decorated-field",
               "field",
-
               "public-constructor",
               "protected-constructor",
               "private-constructor",
               "constructor",
-
               "public-static-method",
               "protected-static-method",
               "private-static-method",
@@ -108,7 +158,6 @@
               "private-instance-method",
               "public-abstract-method",
               "protected-abstract-method",
-              "private-abstract-method",
               "public-method",
               "protected-method",
               "private-method",
@@ -120,12 +169,9 @@
             ]
           }
         ],
-        "@typescript-eslint/lines-between-class-members": [
-          "error",
-          "always",
-          { "exceptAfterSingleLine": true }
-        ],
-        "@typescript-eslint/no-empty-function": ["warn"],
+        "@typescript-eslint/lines-between-class-members": "warn",
+        "@typescript-eslint/no-empty-function": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/explicit-function-return-type": [
           "error",
           {
@@ -138,12 +184,12 @@
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": ["plugin:@nx/javascript"],
       "rules": {}
     },
     {
       "files": ["*.html"],
-      "extends": ["plugin:@nrwl/nx/angular-template"],
+      "extends": ["plugin:@nx/angular-template"],
       "rules": {
         "max-len": [
           "error",
@@ -152,10 +198,7 @@
           }
         ]
       }
-    },
-    {
-      "files": ["*.component.ts"],
-      "extends": ["plugin:@angular-eslint/template/process-inline-templates"]
     }
-  ]
+  ],
+  "extends": ["plugin:storybook/recommended"]
 }

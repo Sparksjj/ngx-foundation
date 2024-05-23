@@ -1,9 +1,14 @@
 export class BaseCrudPermission {
   static PREFIX: string;
+
   static INDEX: string;
+
   static SHOW: string;
+
   static STORE: string;
+
   static UPDATE: string;
+
   static DESTROY: string;
 
   static seedCrudPermissions(prefix: string): void {

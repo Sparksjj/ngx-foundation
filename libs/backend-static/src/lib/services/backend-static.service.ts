@@ -62,9 +62,9 @@ export class BackendStaticService<T = DefaultBackendStaticModel> {
           );
         }
       }),
-      tap(res => {
+      tap({ next: res => {
         this.static = res;
-      })
+      } })
     );
   }
 

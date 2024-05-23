@@ -13,6 +13,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 
 class Test {
   a = 'test';
+
   constructor(data: any) {
     Object.assign(this, data);
   }

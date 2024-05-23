@@ -8,6 +8,7 @@ import { BackendStaticService } from 'backend-static';
 })
 export class AppComponent {
   title = 'angular-core';
+
   constructor(private staticService: BackendStaticService) {
     console.log(staticService);
   }
