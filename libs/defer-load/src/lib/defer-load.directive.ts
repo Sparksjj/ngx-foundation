@@ -48,6 +48,10 @@ export class DeferLoadDirective implements AfterViewInit, OnDestroy {
     if (this.self) {
       this.resubElement(this.elRef.nativeElement, this.elRef.nativeElement);
     } else {
+      // the first init, then form mutation observer, TODO: fix DRY
+      const list = document.querySelectorAll(this.selector);
+      this.resubElement(list[list.length - 1], list[0]);
+
       this.mutationObserver = new MutationObserver(() => {
         const list = document.querySelectorAll(this.selector);
         this.resubElement(list[list.length - 1], list[0]);
