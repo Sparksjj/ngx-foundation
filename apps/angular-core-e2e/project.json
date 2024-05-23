@@ -1,7 +1,10 @@
 {
+  "name": "angular-core-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/angular-core-e2e/src",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["angular-core"],
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
@@ -22,7 +25,5 @@
         "lintFilePatterns": ["apps/angular-core-e2e/**/*.{js,ts}"]
       }
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["angular-core"]
+  }
 }

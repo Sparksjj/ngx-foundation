@@ -1,11 +1,14 @@
 {
+  "name": "defer-load",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/defer-load/src",
   "prefix": "angular-core",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["dist/libs/defer-load"],
+      "outputs": ["{workspaceRoot}/dist/libs/defer-load"],
       "options": {
         "project": "libs/defer-load/ng-package.json"
       },
@@ -21,7 +24,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/defer-load"],
+      "outputs": ["{workspaceRoot}/coverage/libs/defer-load"],
       "options": {
         "jestConfig": "libs/defer-load/jest.config.ts",
         "passWithNoTests": true
@@ -36,6 +39,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }

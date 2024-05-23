@@ -1,21 +1,10 @@
 {
-  "affected": {
-    "defaultBase": "main"
-  },
   "cli": {
     "packageManager": "npm"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e",
-          "build-storybook"
-        ],
         "accessToken": "MDE1YWU2MTItYjkwZi00ODExLWIwNWItODQzYzY2ZDQ2MjRlfHJlYWQtd3JpdGU="
       }
     }
@@ -65,6 +54,10 @@
           "codeCoverage": true
         }
       }
+    },
+    "test": {
+      "cache": true
     }
-  }
+  },
+  "defaultBase": "main"
 }

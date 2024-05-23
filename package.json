@@ -77,7 +77,6 @@
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "17.3.9",
     "@angular/language-service": "17.3.9",
-    "@nrwl/cli": "^15.9.3",
     "@nx/cypress": "19.0.6",
     "@nx/jest": "19.0.6",
     "@nx/workspace": "19.0.6",

@@ -1,11 +1,14 @@
 {
+  "name": "backend-static",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/backend-static/src",
   "prefix": "backend-static",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["dist/libs/backend-static"],
+      "outputs": ["{workspaceRoot}/dist/libs/backend-static"],
       "options": {
         "project": "libs/backend-static/ng-package.json"
       },
@@ -21,7 +24,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/backend-static"],
+      "outputs": ["{workspaceRoot}/coverage/libs/backend-static"],
       "options": {
         "jestConfig": "libs/backend-static/jest.config.ts",
         "passWithNoTests": true
@@ -36,6 +39,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }

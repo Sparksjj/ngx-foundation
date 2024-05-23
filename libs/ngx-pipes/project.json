@@ -1,11 +1,14 @@
 {
+  "name": "ngx-pipes",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ngx-pipes/src",
   "prefix": "angular-core",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["dist/libs/ngx-pipes"],
+      "outputs": ["{workspaceRoot}/dist/libs/ngx-pipes"],
       "options": {
         "project": "libs/ngx-pipes/ng-package.json"
       },
@@ -21,7 +24,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/ngx-pipes"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ngx-pipes"],
       "options": {
         "jestConfig": "libs/ngx-pipes/jest.config.ts",
         "passWithNoTests": true
@@ -36,6 +39,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }

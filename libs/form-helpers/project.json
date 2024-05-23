@@ -1,11 +1,14 @@
 {
+  "name": "form-helpers",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/form-helpers/src",
   "prefix": "angular-core",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["dist/libs/form-helpers"],
+      "outputs": ["{workspaceRoot}/dist/libs/form-helpers"],
       "options": {
         "project": "libs/form-helpers/ng-package.json"
       },
@@ -21,7 +24,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/form-helpers"],
+      "outputs": ["{workspaceRoot}/coverage/libs/form-helpers"],
       "options": {
         "jestConfig": "libs/form-helpers/jest.config.ts",
         "passWithNoTests": true
@@ -36,6 +39,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }

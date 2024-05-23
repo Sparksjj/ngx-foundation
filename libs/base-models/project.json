@@ -1,11 +1,14 @@
 {
+  "name": "base-models",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/base-models/src",
   "prefix": "angular-core",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["dist/libs/base-models"],
+      "outputs": ["{workspaceRoot}/dist/libs/base-models"],
       "options": {
         "project": "libs/base-models/ng-package.json"
       },
@@ -21,7 +24,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["coverage/libs/base-models"],
+      "outputs": ["{workspaceRoot}/coverage/libs/base-models"],
       "options": {
         "jestConfig": "libs/base-models/jest.config.ts",
         "passWithNoTests": true
@@ -36,6 +39,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }
