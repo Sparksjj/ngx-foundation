@@ -13,4 +13,12 @@ export class BaseStorage<T> {
   }
 
   private _data!: T;
+
+  constructor();
+  constructor(defaultData?: T) {
+    if (defaultData) {
+      this._data = defaultData;
+      this.$data.next(this._data);
+    }
+  }
 }
