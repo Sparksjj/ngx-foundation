@@ -15,6 +15,7 @@ export class BaseStorage<T> {
   private _data!: T;
 
   constructor();
+  constructor(defaultData: T);
   constructor(defaultData?: T) {
     if (defaultData) {
       this._data = defaultData;
